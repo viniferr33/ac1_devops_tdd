@@ -10,6 +10,8 @@ import org.junit.Test;
 import com.ac1.entities.Course;
 import com.ac1.entities.Student;
 
+import repository.CourseRepository;
+
 public class ListAvailableCoursesTest {
 	public List<String> allCourses;
 	public ListAvailableCourses listAvailableCourses;
@@ -29,7 +31,8 @@ public class ListAvailableCoursesTest {
 				"Curso10" 
 				);
 		
-		this.listAvailableCourses = new ListAvailableCourses();
+		this.listAvailableCourses = new ListAvailableCourses();		
+		this.listAvailableCourses.setCourseRepository(new CourseRepository(this.allCourses));
 	}
 	
 	@Test

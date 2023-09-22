@@ -13,23 +13,23 @@ import com.ac1.entities.Student;
 import repository.CourseRepository;
 
 public class ListAvailableCoursesTest {
-	public List<String> allCourses;
+	public ArrayList<String> allCourses;
 	public ListAvailableCourses listAvailableCourses;
 	
 	@Before
 	public void beforeAll() {
-		this.allCourses = Arrays.asList(
-				"Curso1", 
-				"Curso2", 
-				"Curso3", 
-				"Curso4", 
-				"Curso5", 
-				"Curso6", 
-				"Curso7", 
-				"Curso8", 
-				"Curso9", 
-				"Curso10" 
-				);
+		this.allCourses = new ArrayList<String>();
+		this.allCourses.add("Curso1");		
+		this.allCourses.add("Curso2");		
+		this.allCourses.add("Curso3");		
+		this.allCourses.add("Curso4");		
+		this.allCourses.add("Curso5");		
+		this.allCourses.add("Curso6");		
+		this.allCourses.add("Curso7");		
+		this.allCourses.add("Curso8");		
+		this.allCourses.add("Curso9");		
+		this.allCourses.add("Curso10");		
+		
 		
 		this.listAvailableCourses = new ListAvailableCourses();		
 		this.listAvailableCourses.setCourseRepository(new CourseRepository(this.allCourses));
@@ -64,7 +64,7 @@ public class ListAvailableCoursesTest {
 		Course course2 = new Course("Curso2", true, 3.0);
 		Course course3 = new Course("Curso3", false, 0.0);
 		
-		Student std = new Student("200200", "Student1", Arrays.asList(course1, course2, course3));
+		Student std = new Student("200200", "Student2", Arrays.asList(course1, course2, course3));
 		
 		
 		// Act -> Chama a função execute passando o aluno
@@ -93,7 +93,7 @@ public class ListAvailableCoursesTest {
 		Course course2 = new Course("Curso9", true, 3.0);
 		Course course3 = new Course("Curso10", false, 0.0);
 		
-		Student std = new Student("200200", "Student1", Arrays.asList(course1, course2, course3));
+		Student std = new Student("200200", "Student3", Arrays.asList(course1, course2, course3));
 		
 		
 		// Act -> Chama a função execute passando o aluno

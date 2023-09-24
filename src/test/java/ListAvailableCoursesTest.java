@@ -7,10 +7,11 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.ac1.entities.Course;
-import com.ac1.entities.Student;
-
+import entity.Course;
+import entity.Student;
 import repository.CourseRepository;
+import service.ListAvailableCourses;
+import service.ListAvailableCoursesOutput;
 
 public class ListAvailableCoursesTest {
 	public ArrayList<String> allCourses;

@@ -3,7 +3,7 @@ package repository;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.ac1.entities.Course;
+import entity.Course;
 
 public class CourseRepository {
 	private ArrayList<String> allCourses;

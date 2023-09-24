@@ -1,9 +1,9 @@
+package service;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.ac1.entities.Course;
-import com.ac1.entities.Student;
-
+import entity.Course;
+import entity.Student;
 import repository.CourseRepository;
 
 public class ListAvailableCourses {

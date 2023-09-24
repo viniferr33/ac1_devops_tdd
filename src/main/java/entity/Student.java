@@ -2,6 +2,9 @@ package entity;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Student {
 	public String RA;
 	public String Name;

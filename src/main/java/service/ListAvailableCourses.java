@@ -29,10 +29,11 @@ public class ListAvailableCourses {
 			Integer courseIndex = allCourses.indexOf(course.getName());
 			System.out.printf("Curso: %s Index: %d\n", course.getName(), courseIndex);
 
-			if (courseIndex != -1) {
-				allCourses.remove(courseIndex.intValue());
+			if (courseIndex == -1) {
+				return null;
 			}
-
+			
+			allCourses.remove(courseIndex.intValue());
 			if (course.getFinished() && course.getGrade() >= 7.5) {
 				numCourses += 3;
 			}

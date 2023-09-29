@@ -52,10 +52,6 @@ public class ListAvailableCourses {
 		return output;
 	}
 
-	public CourseRepository getCourseRepository() {
-		return courseRepository;
-	}
-
 	public void setCourseRepository(CourseRepository courseRepository) {
 		this.courseRepository = courseRepository;
 	}

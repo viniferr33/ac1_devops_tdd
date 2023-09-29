@@ -1,3 +1,4 @@
+package service;
 import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
@@ -106,5 +107,20 @@ public class ListAvailableCoursesTest {
 		
 		assertEquals(output.getAvailableCourses(), expectedCoursesList);
 		assertEquals(output.getAvailableCoursesNum(), expectedCoursesNum);
+	}
+	
+	@Test
+	public void testListAvailableCourses_invalidCourse() {
+		// Arrange -> Criar um novo aluno com cursos onde ele falhou
+				Course course1 = new Course("Invalid", true, 3.5);
+				
+				Student std = new Student("200200", "Student3", Arrays.asList(course1));
+				
+				
+				// Act -> Chama a função execute passando o aluno
+				ListAvailableCoursesOutput output = this.listAvailableCourses.execute(std);
+				
+				// Assert -> Nenhum curso deve ser retornado			
+				assertEquals(output, null);
 	}
 }
